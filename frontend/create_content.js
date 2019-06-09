@@ -1,21 +1,21 @@
-function send_data(articles)
+function send_data(articles,topic)
 { 
     for(i = 0;i<articles.length;i++)
     {   if(i%3==0)
         {
             let news = document.getElementById('breaking_news');
             news.innerHTML += '<br><div class = "row "></div>' ;
-            create(articles[i]);
+            create(articles[i],topic,topic);
             // news.innerHTML += '</div>';
         }
         else
         {
-            create(articles[i]);
+            create(articles[i],topic);
         }
     }
     add_hover();
 }
-function create(article)
+function create(article,topic)
 {
    let a_box = document.createElement('div');
    a_box.setAttribute('class','col-lg-4 ml-5 mr-5 columns');
@@ -45,7 +45,7 @@ function create(article)
    {
     var content = article['description']+'...';
    }
-   let type = 'content';
+   let type = topic;
    columns[columns.length -1].innerHTML += `
     <div class="post-module">
       <div class="thumbnail">

@@ -11,10 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "https": "^1.0.0",
     "jQuery": "^1.7.4",
-    "jquery": "^3.4.1",
-    "jsdom": "^15.1.1",
     "newsapi": "^2.4.0"
   }
 }

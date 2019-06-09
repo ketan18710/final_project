@@ -31,7 +31,7 @@ function create(article)
         return Date.shortMonths[month]; 
       }
    month = short_months(month)
-   let day = timestamp.getDay();
+   let day = timestamp.getDate();
    let author = article['author'];
    let title = article['title'];
    let art_link = article['url'];

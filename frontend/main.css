@@ -1,0 +1,27 @@
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.navbar .dropdown-menu a:hover {
+    color: #616161 !important;
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}
+a{
+    color: #2E2E2E
+}
+.form-control{
+    width: 75% !important;
+    display: inline-block !important;
+}
+#form{
+    display: block;
+    margin-top: 5px !important;
+}
+nav{
+    background: #2E2E2E;
+}
+.nav-item{
+    color: #e3eeff;
+    margin-top: 12px !important;
+}

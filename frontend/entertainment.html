@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Entertainment News</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="create_content.js" ></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="card.css">
+        <script>
+            $.get('/entertainment',(data)=>
+            {
+                console.log(data);
+                
+                send_data(data)
+            })
+        </script>
+            </head>
+    <body >
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark container-fluid">
+                    <a class="nav-item nav-link active col-lg-1" href="index.html">Home</a>
+                    <a class="nav-item nav-link active col-lg-1 " href="business.html">Business</a>
+                    <a class="nav-item nav-link col-lg-1" href="science.html">Science</a>
+                    <a class="nav-item nav-link col-lg-1" href="entertainment.html">Entertainment</a>
+                    <a class="nav-item nav-link col-lg-1" href="sports.html">Sports</a>
+                    <a class="nav-item nav-link col-lg-1" href="technology.html">Technology</a>
+                    <a class="nav-item nav-link col-lg-1" href="health.html">Health</a>
+                    <div class="col-lg-5 " id="form" >
+                        <input class="form-control mr-sm-2 col-lg-3"  id = "search" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0 col-lg-2 " onclick="search()" style="display: inline-block">Search</button>
+                    </div>
+            </nav>
+        
+        <div id="breaking_news" class="container-fluid">
+            
+        </div>
+    </body>
+</html>

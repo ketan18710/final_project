@@ -38,49 +38,49 @@
           }).then(response => {
             breaking_news = response['articles'];
           });
-        newsapi.v2.everything({
-            q: 'business',
-            language: 'en'
+          newsapi.v2.topHeadlines({
+            category: 'business',
+            language: 'en',
+            country:'in'
           }).then(response => {
-            business_news = response['articles'];
-          });
-        newsapi.v2.everything({
-            q: 'sports',
-            language: 'en'
+            business_news =response['articles'];
+          });   
+          newsapi.v2.topHeadlines({
+            category: 'science',
+            language: 'en',
+            country:'in'
           }).then(response => {
-            sports_news = response['articles'];
-          });
-          newsapi.v2.everything({
-            q: 'entertainment',
-            language: 'en'
+            science_news =response['articles'];
+          });   
+          newsapi.v2.topHeadlines({
+            category: 'entertainment',
+            language: 'en',
+            country:'in'
           }).then(response => {
-            ent_news = response['articles'];
-            
-          });
-          newsapi.v2.everything({
-            q: 'health',
-            language: 'en'
+            ent_news =response['articles'];
+          });    
+            newsapi.v2.topHeadlines({
+              category: 'sports',
+              language: 'en',
+              country:'in'
+            }).then(response => {
+              sports_news = response['articles']
+            });      
+          newsapi.v2.topHeadlines({
+            category: 'health',
+            language: 'en',
+            country:'in'
           }).then(response => {
             health_news = response['articles'];
-            // console.log(health_news)
-            
           });
-        newsapi.v2.everything({
-          q: 'science',
-          language: 'en'
-        }).then(response => {
-          science_news = response['articles'];
-        //   console.log(science_news)
-          
-        });
-        newsapi.v2.everything({
-            q: 'technology',
-            language: 'en'
+          newsapi.v2.topHeadlines({
+            category: 'technology',
+            language: 'en',
+            country:'in'
           }).then(response => {
             tech_news = response['articles'];
-            // console.log(tech_news)
-            
           });
+      
     }
     // get_data();
     setInterval(()=>{

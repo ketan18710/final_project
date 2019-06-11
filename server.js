@@ -34,49 +34,56 @@
     {
         newsapi.v2.topHeadlines({
             language: 'en',
-            country: 'in'
+            country: 'in',
+            pageSize : 100
           }).then(response => {
             breaking_news = response['articles'];
           });
           newsapi.v2.topHeadlines({
             category: 'business',
             language: 'en',
-            country:'in'
+            country:'in',
+            pageSize : 100
           }).then(response => {
             business_news =response['articles'];
           });   
           newsapi.v2.topHeadlines({
             category: 'science',
             language: 'en',
-            country:'in'
+            country:'in',
+            pageSize : 100
           }).then(response => {
             science_news =response['articles'];
           });   
           newsapi.v2.topHeadlines({
             category: 'entertainment',
             language: 'en',
-            country:'in'
+            country:'in',
+            pageSize : 100
           }).then(response => {
             ent_news =response['articles'];
           });    
             newsapi.v2.topHeadlines({
               category: 'sports',
               language: 'en',
-              country:'in'
+              country:'in',
+              pageSize : 100
             }).then(response => {
               sports_news = response['articles']
             });      
           newsapi.v2.topHeadlines({
             category: 'health',
             language: 'en',
-            country:'in'
+            country:'in',
+            pageSize : 100
           }).then(response => {
             health_news = response['articles'];
           });
           newsapi.v2.topHeadlines({
             category: 'technology',
             language: 'en',
-            country:'in'
+            country:'in',
+            pageSize : 100
           }).then(response => {
             tech_news = response['articles'];
           });

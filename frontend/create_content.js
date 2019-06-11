@@ -52,7 +52,7 @@ function create(article,topic)
         <div class="date">
           <div class="day">${day}</div>
           <div class="month">${month}</div>
-        </div><img src="${img_link}"/>
+        </div><img src="${img_link}" onerror="imgError(this)"/>
       </div>
       <div class="post-content">
         <div class="category">${type}</div>
@@ -70,4 +70,9 @@ function add_hover()
   $('.post-module').hover(function() {
     $(this).find('.description').stop().animate({height: "toggle", opacity: "toggle"}, 300);
   });
+}
+function imgError(image) {
+  image.onerror = "";
+  image.src = "https://cdn3.iconfinder.com/data/icons/ballicons-reloaded-free/512/icon-70-512.png";
+  return true;
 }
